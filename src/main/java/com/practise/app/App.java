@@ -15,7 +15,7 @@ public class App {
         sc.nextLine(); // Consume newline left-over
 
         switch (choice) {
-            
+
             case 1:
                 System.out.println("Adding Feedback");
                 AddFeedback addFeedback = new AddFeedback();
@@ -41,7 +41,7 @@ public class App {
                 break;
 
             default:
-                System.out.println("Invalid choice");
+                System.out.println("Invalid choice : " + choice);
         }
 
     }
