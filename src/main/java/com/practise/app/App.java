@@ -15,6 +15,7 @@ public class App {
         sc.nextLine(); // Consume newline left-over
 
         switch (choice) {
+            
             case 1:
                 System.out.println("Adding Feedback");
                 AddFeedback addFeedback = new AddFeedback();
@@ -26,14 +27,19 @@ public class App {
                 ViewAllFeedback viewAllFeedback = new ViewAllFeedback();
                 viewAllFeedback.viewFeedback();
                 break;
+
             case 3:
                 System.out.println("Deleting Feedback");
+                DeleteByID deleteByID = new DeleteByID();
+                deleteByID.deleteFeedbackById();
                 break;
+
             case 4:
                 System.out.println("Update Feedback");
                 UpdateComment updateComment = new UpdateComment();
                 updateComment.updateFeedback();
                 break;
+
             default:
                 System.out.println("Invalid choice");
         }
