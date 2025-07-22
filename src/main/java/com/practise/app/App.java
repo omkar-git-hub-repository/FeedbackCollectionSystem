@@ -1,37 +1,33 @@
 package com.practise.app;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import java.util.Scanner;
 
-import com.practise.Utility.HibernateUtility;
-
-/**
- * Hello world!
- *
- */
-<<<<<<< HEAD
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        SessionFactory factory = HibernateUtility.getSessionFactory();
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
 
-        AddFeedback addFeedback = new AddFeedback();
-        addFeedback.addFeedback();
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt();
+        sc.nextLine(); // Consume newline left-over
 
-        session.persist(addFeedback);
-        transaction.commit();
-        session.close();
+        switch (choice) {
+            case 1:
+                System.out.println("Adding Feedback");
+                AddFeedback addFeedback = new AddFeedback();
+                addFeedback.addFeedback();
+                break;
+                
+            case 2:
+                System.out.println("Updating Feedback");
+                break;
+            case 3:
+                System.out.println("Deleting Feedback");
+                break;
+            case 4:
+                System.out.println("Viewing Feedback");
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
 
-=======
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        
->>>>>>> ea6fb4453f697992cc63e85610e108971587a739
     }
 }
