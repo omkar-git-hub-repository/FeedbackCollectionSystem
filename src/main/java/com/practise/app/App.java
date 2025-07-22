@@ -10,6 +10,7 @@ import com.practise.Utility.HibernateUtility;
  * Hello world!
  *
  */
+<<<<<<< HEAD
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -24,5 +25,13 @@ public class App {
         transaction.commit();
         session.close();
 
+=======
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+>>>>>>> ea6fb4453f697992cc63e85610e108971587a739
     }
 }
