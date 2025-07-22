@@ -30,7 +30,9 @@ public class App {
                 System.out.println("Deleting Feedback");
                 break;
             case 4:
-                System.out.println("Viewing Feedback");
+                System.out.println("Update Feedback");
+                UpdateComment updateComment = new UpdateComment();
+                updateComment.updateFeedback();
                 break;
             default:
                 System.out.println("Invalid choice");
