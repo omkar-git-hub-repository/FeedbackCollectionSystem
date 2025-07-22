@@ -1,5 +1,8 @@
 package com.practise.app;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import com.practise.Utility.HibernateUtility;
 
@@ -7,11 +10,19 @@ import com.practise.Utility.HibernateUtility;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        HibernateUtility.getSessionFactory();
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        SessionFactory factory = HibernateUtility.getSessionFactory();
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        AddFeedback addFeedback = new AddFeedback();
+        addFeedback.addFeedback();
+
+        session.persist(addFeedback);
+        transaction.commit();
+        session.close();
+
     }
 }
