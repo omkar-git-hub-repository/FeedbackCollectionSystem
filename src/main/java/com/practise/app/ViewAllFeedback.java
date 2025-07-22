@@ -17,7 +17,12 @@ public class ViewAllFeedback {
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        // Assuming Feedbacks is an entity class mapped to a database table
-        List<Feedbacks> feedbackList = session.createQuery("Select f FROM Feedbacks f", Feedbacks.class}.getResultList();
-        
+        List<Feedbacks> feedbacklist = session.createQuery("Select f from Feedbacks f", Feedbacks.class)
+                .getResultList();
+        feedbacklist.stream().forEach(k -> System.out.println(k.toString()));
+
+        transaction.commit();
+        session.close();
+
+    }
 }

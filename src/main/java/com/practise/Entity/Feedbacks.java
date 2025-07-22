@@ -1,7 +1,12 @@
 package com.practise.Entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Feedbacks {
 
+    @Id
     private int id;
     private String UserName;
     private String email;
@@ -44,9 +49,6 @@ public class Feedbacks {
     public String toString() {
         return "Feedbacks [id=" + id + ", UserName=" + UserName + ", email=" + email + ", Comments=" + Comments
                 + ", rating=" + rating + "]";
-    }
-
-    // create getter and setter
-    
+    }   
     
 }

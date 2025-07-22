@@ -39,7 +39,7 @@ public class AddFeedback {
         sc.nextLine(); // Consume newline left-over
 
 
-        
+        session.persist(f);
         transaction.commit();
         session.close();
 
